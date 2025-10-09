@@ -1,6 +1,6 @@
 import React from 'react'
-import Layout from '../components/Layout'
 import EmployeeAttendance from '../components/employeeAttendace'
+import Layout from '../components/layout'
 
 function EmployeeAttendancePage() {
   return (
