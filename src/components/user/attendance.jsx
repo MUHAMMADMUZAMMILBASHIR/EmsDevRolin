@@ -284,6 +284,7 @@ const Attendance = () => {
   const [year, setYear] = useState(today.getFullYear());
 
   // ✅ Fetch Attendance
+// ✅ Fetch Attendance
 const fetchAttendance = async (preserveClockState = false) => {
   if (!user?.id) return;
   try {
@@ -291,27 +292,55 @@ const fetchAttendance = async (preserveClockState = false) => {
     const res = await axios.get(`/api/attendance/${user.id}`);
     const records = res?.data?.records || [];
 
+    // ✅ Filter by selected month/year
     const filtered = records.filter((r) => {
       const d = new Date(r.date);
       return d.getMonth() + 1 === month && d.getFullYear() === year;
     });
 
-    setRecent(filtered);
+    // ✅ Generate full list of days for current month
+    const daysInMonth = new Date(year, month, 0).getDate();
+    const today = new Date();
 
-    const present = filtered.filter((r) => r.status === "present").length;
-    const late = filtered.filter((r) => r.status === "late").length;
-    const halfDay = filtered.filter((r) => r.status === "half-day").length;
-    const absent = filtered.filter((r) => r.status === "absent").length;
+    const allDays = [];
+    for (let day = 1; day <= daysInMonth; day++) {
+      const date = new Date(year, month - 1, day);
+      const dateStr = date.toISOString().split("T")[0];
+      const record = filtered.find(
+        (r) => new Date(r.date).toISOString().split("T")[0] === dateStr
+      );
+
+      // ✅ If no check-in record for this day and it's a past date, mark absent
+      if (!record && date <= today) {
+        allDays.push({
+          date: dateStr,
+          status: "absent",
+          checkIn: null,
+          checkOut: null,
+        });
+      } else if (record) {
+        allDays.push(record);
+      }
+    }
+
+    setRecent(allDays);
+
+    // ✅ Count statuses (matching backend logic)
+    const present = allDays.filter((r) => r.status === "present").length;
+    const late = allDays.filter((r) => r.status === "late").length;
+    const halfDay = allDays.filter((r) => r.status === "half-day").length;
+    const absent = allDays.filter((r) => r.status === "absent").length;
+
     const totalDays = present + late + halfDay + absent;
     const attendanceRate =
       totalDays > 0 ? ((present + late + halfDay) / totalDays) * 100 : 0;
 
     setStats({ present, late, halfDay, absent, attendanceRate });
 
-    // ✅ Only update clock status if not preserving UI state
+    // ✅ Only update today's clock state if not preserving
     if (!preserveClockState) {
       const todayDate = new Date().toISOString().split("T")[0];
-      const todayRecord = records.find(
+      const todayRecord = allDays.find(
         (r) => new Date(r.date).toISOString().split("T")[0] === todayDate
       );
 

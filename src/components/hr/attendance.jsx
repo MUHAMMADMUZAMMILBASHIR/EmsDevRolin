@@ -615,11 +615,7 @@
 
 // export default Attendance;
 // src/pages/Attendance.jsx
-import React, { useEffect, useState } from "react";
-import axios from "../../util/axiosInstance";
-import toast from "react-hot-toast";
-import { FaUserCheck, FaUserClock, FaUserTimes, FaUserMinus } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
+
 
 /**
  * Attendance.jsx
@@ -635,6 +631,13 @@ import { useNavigate } from "react-router-dom";
  */
 
 /* --- Helpers --- */
+
+import React, { useEffect, useState } from "react";
+import axios from "../../util/axiosInstance";
+import toast from "react-hot-toast";
+import { FaUserCheck, FaUserClock, FaUserTimes, FaUserMinus } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
+
 
 // format date to YYYY-MM-DD
 const toYYYYMMDD = (d = new Date()) =>

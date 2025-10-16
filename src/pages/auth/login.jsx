@@ -98,9 +98,9 @@ const handleSubmit = async(e) => {
               <input type="checkbox" className="rounded" />
               Remember me
             </label>
-            <a href="/forgot-password" className="text-blue-600 hover:underline">
+            {/* <a href="/forgot-password" className="text-blue-600 hover:underline">
               Forgot password?
-            </a>
+            </a> */}
           </div>
 
           {/* Button */}
@@ -116,7 +116,7 @@ const handleSubmit = async(e) => {
         <p className="mt-6 text-center text-sm text-gray-600">
           New employee?{" "}
           <a href="/signup" className="text-blue-600 hover:underline">
-            Request Access
+            Create Account
           </a>
         </p>
 
