@@ -274,6 +274,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { FileText, CheckCircle, Clock, XCircle, Plus } from "lucide-react";
 import axios from "../../util/axiosInstance";
 import { UserInfoContext } from "../../context/contextApi";
+import ScreenLayout from "../ScreenLayout";
 
 const UserLeave = () => {
   const [leaveRequests, setLeaveRequests] = useState([]);
@@ -349,6 +350,8 @@ const UserLeave = () => {
   };
 
   return (
+    <ScreenLayout>
+
     <div className="p-6 space-y-8 text-gray-800">
 
       {/* Header */}
@@ -538,6 +541,8 @@ const UserLeave = () => {
         )}
       </div>
     </div>
+    </ScreenLayout>
+
   );
 };
 

@@ -3,7 +3,7 @@ import Layout from '../../components/ScreenLayout'
 import LeaveRequests from '../../components/user/UserLeave'
 
 
-function LeavePage() {
+function UserLeavePage() {
   return (
    <Layout>
    <LeaveRequests/>

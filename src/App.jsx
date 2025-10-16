@@ -9,14 +9,13 @@ import SignUpPage from "./pages/auth/SignUpPage";
 // User Pages
 import UserDashboard from "./pages/user/UserDashboardPage";
 import AttendancePage from "./pages/user/AttendancePage";
-import LeavePage from "./pages/user/LeavePage";
 import Achievement from "./pages/user/AchievementUserPage";
 import Report from "./pages/user/ReportPage";
 
 // HR Pages
 import EmployeeApprovalPage from "./pages/hr/EmployeeApprovalPage";
 import AttendanceAdminPage from "./pages/hr/AttendanceAdminPage";
-import EmployeeAttendancePage from "./pages/EmployeeAttendance";
+import EmployeeAttendancePage from "./pages/EmployeeAttendancePage";
 import LeaveAdminPage from "./pages/hr/LeaveAdminPage";
 import TaskAdmin from "./pages/hr/TaskAdmin";
 import HRDashboard from "./pages/hr/HrDashboardPage";
@@ -29,6 +28,7 @@ import Profile from "./components/user/UserProfile";
 import Document from "./components/user/UserDocuments ";
 import Employee from "./components/hr/Employee";
 import HRDocuments from "./components/hr/HRDocuments";
+import UserLeave from "./components/user/UserLeave";
 
 function App() {
   return (
@@ -45,7 +45,7 @@ function App() {
           {/* User Routes */}
           <Route path="/employee/dashboard" element={<UserDashboard />} />
           <Route path="/employee/attendance" element={<AttendancePage />} />
-          <Route path="/employee/leave-requests" element={<LeavePage />} />
+          <Route path="/employee/leave-requests" element={<UserLeave />} />
           <Route path="/employee/tasks" element={<Tasks />} />
           <Route path="/employee/profile" element={<Profile />} />
           <Route path="/employee/document" element={<Document />} />
