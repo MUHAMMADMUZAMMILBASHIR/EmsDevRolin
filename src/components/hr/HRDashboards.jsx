@@ -20,7 +20,7 @@ import {
 import { Loader2 } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const HRDashboard = () => {
+const HRDashboards = () => {
   const { user } = useContext(UserInfoContext);
   const [employees, setEmployees] = useState([]);
   const [tasks, setTasks] = useState([]);
@@ -77,9 +77,9 @@ const HRDashboard = () => {
   return (
     <div className="flex flex-col md:flex-row min-h-screen bg-gray-100">
       {/* Sidebar - always visible on md+ , stacked on small */}
-      <div className="w-full md:w-64 md:h-auto shadow-md">
+      {/* <div className="w-full md:w-64 md:h-auto shadow-md">
         <Sidebar />
-      </div>
+      </div> */}
 
       {/* Dashboard Content */}
       <div className="flex-1 p-4 md:p-8 space-y-8">
@@ -242,4 +242,4 @@ const HRDashboard = () => {
   );
 };
 
-export default HRDashboard;
+export default HRDashboards;

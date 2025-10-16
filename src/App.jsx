@@ -1,32 +1,34 @@
-import './App.css'
-import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom'
-import { Toaster } from 'react-hot-toast'
+import "./App.css";
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
+import { Toaster } from "react-hot-toast";
 
 // Auth Pages
-import LoginPage from './pages/auth/login'
-import SignUpPage from './pages/auth/signup'
+import LoginPage from "./pages/auth/LoginPage";
+import SignUpPage from "./pages/auth/SignUpPage";
 
 // User Pages
-import UserDashboard from './pages/user/userDashboard'
-import AttendancePage from './pages/user/attendance'
-import LeavePage from './pages/user/leavePage'
+import UserDashboard from "./pages/user/UserDashboardPage";
+import AttendancePage from "./pages/user/AttendancePage";
+import LeavePage from "./pages/user/LeavePage";
+import Achievement from "./pages/user/AchievementUserPage";
+import Report from "./pages/user/ReportPage";
 
 // HR Pages
-import EmployeeApprovalPage from './pages/hr/employeeApproval'
-import AttendanceAdminPage from './pages/hr/attendancePage'
-import EmployeeAttendancePage from './pages/employeeAttendance'
-import LeaveAdminPage from './pages/hr/leavePage'
-import TaskAdmin from './pages/hr/task'
-import Tasks from './components/user/Tasks'
-import Profile from './components/user/Profile'
-import Document from './components/user/Document'
-import HRDashboard from './pages/hr/HRDashboard'
-import Employee from './components/hr/Employee'
-import Achievements from './components/hr/Achievements'
-import HRDocuments from './components/hr/Documents'
-import Achievement from './pages/user/Achievements'
-import Report from './pages/user/Report'
-import Letter from './pages/hr/Letter'
+import EmployeeApprovalPage from "./pages/hr/EmployeeApprovalPage";
+import AttendanceAdminPage from "./pages/hr/AttendanceAdminPage";
+import EmployeeAttendancePage from "./pages/EmployeeAttendance";
+import LeaveAdminPage from "./pages/hr/LeaveAdminPage";
+import TaskAdmin from "./pages/hr/TaskAdmin";
+import HRDashboard from "./pages/hr/HrDashboardPage";
+import Letter from "./pages/hr/LetterPage";
+import AchievementsPage from "./pages/hr/AchievementsPage";
+
+// Components
+import Tasks from "./components/user/UserTasks";
+import Profile from "./components/user/UserProfile";
+import Document from "./components/user/UserDocuments ";
+import Employee from "./components/hr/Employee";
+import HRDocuments from "./components/hr/HRDocuments";
 
 function App() {
   return (
@@ -47,29 +49,28 @@ function App() {
           <Route path="/employee/tasks" element={<Tasks />} />
           <Route path="/employee/profile" element={<Profile />} />
           <Route path="/employee/document" element={<Document />} />
-          <Route path='/employee/achievement' element={<Achievement/>}/>
-          <Route path='/employee/reports' element={<Report/>} />
+          <Route path="/employee/achievement" element={<Achievement />} />
+          <Route path="/employee/reports" element={<Report />} />
 
           {/* HR Routes */}
-          <Route path="/hr/employee-approval" element={<EmployeeApprovalPage />} /> 
-          <Route path='/hr/employee'  element={<Employee/>}/>
-          <Route path='/hr/achievements'  element={<Achievements/>}/>
-          <Route path='/hr/letters' element={<Letter/>} />
+          <Route path="/hr/employee-approval" element={<EmployeeApprovalPage />} />
+          <Route path="/hr/employee" element={<Employee />} />
+          <Route path="/hr/achievements" element={<AchievementsPage />} />
+          <Route path="/hr/letters" element={<Letter />} />
           <Route path="/hr/attendance" element={<AttendanceAdminPage />} />
           <Route path="/hr/attendance/:empId" element={<EmployeeAttendancePage />} />
           <Route path="/hr/leave-requests" element={<LeaveAdminPage />} />
           <Route path="/hr/tasks" element={<TaskAdmin />} />
           <Route path="/hr/HRdashboard" element={<HRDashboard />} />
-          <Route path="/hr/Documents" element={<HRDocuments />} />
-          
+          <Route path="/hr/documents" element={<HRDocuments />} />
 
-          {/* Fallback route if nothing matches */}
+          {/* Fallback */}
           <Route path="*" element={<Navigate to="/login" />} />
         </Routes>
         <Toaster />
       </BrowserRouter>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

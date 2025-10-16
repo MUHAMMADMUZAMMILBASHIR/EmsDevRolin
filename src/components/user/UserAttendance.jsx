@@ -265,7 +265,7 @@ import { Calendar, Clock, UserCheck } from "lucide-react";
 import { UserInfoContext } from "../../context/contextApi";
 import toast from "react-hot-toast";
 
-const Attendance = () => {
+const UserAttendance = () => {
   const { user } = useContext(UserInfoContext);
   const [status, setStatus] = useState("Not checked in");
   const [isClockedIn, setIsClockedIn] = useState(false);
@@ -549,5 +549,5 @@ const handleClock = async () => {
   );
 };
 
-export default Attendance;
+export default UserAttendance;
 

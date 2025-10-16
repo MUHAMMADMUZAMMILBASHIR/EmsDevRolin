@@ -1,6 +1,6 @@
 import React from 'react'
-import Layout from '../../components/Layout'
-import LeaveManagement from '../../components/hr/leave'
+import Layout from '../../components/ScreenLayout'
+import LeaveManagement from '../../components/hr/LeaveManagement'
 
 function LeaveAdminPage() {
   return (

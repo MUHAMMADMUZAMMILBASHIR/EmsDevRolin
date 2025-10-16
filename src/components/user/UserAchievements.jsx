@@ -2,9 +2,9 @@ import React, { useContext, useEffect, useState } from "react";
 import axios from "../../util/axiosInstance";
 import { UserInfoContext } from "../../context/contextApi";
 import { AlertCircle, Loader2, Trophy, Download } from "lucide-react";
-import Layout from "../../components/Layout";
+import Layout from "../ScreenLayout";
 
-const Achievements = () => {
+const UserAchievements = () => {
   const { user } = useContext(UserInfoContext);
   const [achievements, setAchievements] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -97,4 +97,4 @@ const Achievements = () => {
   );
 };
 
-export default Achievements;
+export default UserAchievements;

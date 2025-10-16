@@ -275,7 +275,7 @@ import { FileText, CheckCircle, Clock, XCircle, Plus } from "lucide-react";
 import axios from "../../util/axiosInstance";
 import { UserInfoContext } from "../../context/contextApi";
 
-const LeaveRequests = () => {
+const UserLeave = () => {
   const [leaveRequests, setLeaveRequests] = useState([]);
   const [showForm, setShowForm] = useState(false);
 
@@ -541,5 +541,5 @@ const LeaveRequests = () => {
   );
 };
 
-export default LeaveRequests;
+export default UserLeave;
 

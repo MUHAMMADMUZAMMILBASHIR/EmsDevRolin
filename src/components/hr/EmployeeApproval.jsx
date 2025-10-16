@@ -1,6 +1,6 @@
 
 import toast from "react-hot-toast";
-import axios from "./../../util/axiosInstance";
+import axios from "../../util/axiosInstance";
 import React, { useEffect, useState } from "react";
 import { MdEmail } from "react-icons/md";
 import { User2Icon } from "lucide-react";

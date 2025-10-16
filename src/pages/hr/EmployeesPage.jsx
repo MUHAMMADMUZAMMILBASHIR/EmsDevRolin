@@ -1,11 +1,11 @@
 import React from 'react'
 import Layout from '../../components/Layout'
-import Reports from '../../components/user/Reports'
+import Employee from '../../components/hr/Employee'
 
-export default function Report() {
+export default function EmployeesPage() {
   return (
     <Layout>
-        <Reports/>
+    <Employee/>
     </Layout>
   )
 }

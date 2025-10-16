@@ -107,13 +107,13 @@
 // }
 import React, { useContext, useState } from "react";
 import { UserInfoContext } from "../../context/contextApi";
-import Sidebar from "../../components/sideBar";
+import Sidebar from "../sideBar";
 import {
   User, Mail, Phone, Building2, Calendar,
   BriefcaseBusiness, BadgeCheck, GraduationCap,
 } from "lucide-react";
 
-export default function Profile() {
+export default function UserProfile() {
   const { user } = useContext(UserInfoContext); // 👈 context se user data
   const [editMode, setEditMode] = useState(false);
   console.log(user)

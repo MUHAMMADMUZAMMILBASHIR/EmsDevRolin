@@ -4,7 +4,7 @@ import { UserInfoContext } from "../../context/contextApi";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 
-const Login = () => {
+const LoginPage = () => {
   const {setUser,setAccessToken} = useContext(UserInfoContext)
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -130,5 +130,5 @@ const handleSubmit = async(e) => {
   );
 };
 
-export default Login;
+export default LoginPage;
 

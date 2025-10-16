@@ -214,9 +214,9 @@ import React, { useContext, useEffect, useState } from "react";
 import axios from "../../util/axiosInstance";
 import { UserInfoContext } from "../../context/contextApi";
 import { AlertCircle, Loader2 } from "lucide-react";
-import Layout from "../../components/Layout";
+import Layout from "../ScreenLayout";
 
-const Tasks = () => {
+const UserTasks = () => {
   const { user } = useContext(UserInfoContext);
   const [tasks, setTasks] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -359,4 +359,4 @@ const Tasks = () => {
   );
 };
 
-export default Tasks;
+export default UserTasks;

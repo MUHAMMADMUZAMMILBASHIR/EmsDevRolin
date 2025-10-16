@@ -155,7 +155,7 @@ import axios from "../../util/axiosInstance";
 import toast from "react-hot-toast";
 import { UserInfoContext } from "../../context/contextApi";
 
-const Dashboard = () => {
+const UserDashboard = () => {
   const { user } = useContext(UserInfoContext);
   const [employee, setEmployee] = useState(null);
   const [stats, setStats] = useState({
@@ -339,5 +339,5 @@ useEffect(() => {
   );
 };
 
-export default Dashboard;
+export default UserDashboard;
 

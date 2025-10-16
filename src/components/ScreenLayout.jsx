@@ -1,8 +1,8 @@
 // src/layouts/UserLayout.jsx
 import React from "react";
-import SideBar from "../components/sideBar";
+import SideBar from "./sideBar";
 
-export default function Layout({ children }) {
+export default function ScreenLayout({ children }) {
   return (
    
     <div className="flex-1  min-h-screen bg-gray-100">

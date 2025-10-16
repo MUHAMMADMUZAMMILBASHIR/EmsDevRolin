@@ -1,6 +1,6 @@
 import React from 'react'
-import Layout from '../../components/Layout'
-import LeaveRequests from '../../components/user/leave'
+import Layout from '../../components/ScreenLayout'
+import LeaveRequests from '../../components/user/UserLeave'
 
 
 function LeavePage() {

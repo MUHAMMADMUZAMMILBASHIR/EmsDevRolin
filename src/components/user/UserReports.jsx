@@ -3,7 +3,7 @@ import { Download, FileText, Filter, Calendar, Loader2 } from "lucide-react";
 import axios from "../../util/axiosInstance";
 import { UserInfoContext } from "../../context/contextApi";
 
-export default function Reports() {
+export default function UserReports() {
   const { user } = useContext(UserInfoContext);
   const [reports, setReports] = useState([]);
   const [loading, setLoading] = useState(true);

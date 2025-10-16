@@ -238,7 +238,7 @@ import toast from "react-hot-toast";
 import { FiUpload, FiDownload, FiTrash2, FiEye } from "react-icons/fi";
 import Sidebar from "../sideBar";
 
-function DocumentManagement() {
+function HRDocuments() {
   const [documents, setDocuments] = useState([]);
   const [employees, setEmployees] = useState([]);
   const [showForm, setShowForm] = useState(false);
@@ -548,5 +548,5 @@ function DocumentManagement() {
   );
 }
 
-export default DocumentManagement;
+export default HRDocuments;
 

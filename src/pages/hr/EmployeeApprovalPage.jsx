@@ -1,6 +1,6 @@
 import React from 'react'
-import EmployeeApprovaal from '../../components/hr/employeeApprovaal'
-import Layout from '../../components/Layout'
+import EmployeeApprovaal from '../../components/hr/EmployeeApproval'
+import Layout from '../../components/ScreenLayout'
 
 function EmployeeApprovalPage() {
   return (

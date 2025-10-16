@@ -680,7 +680,7 @@ const recalcSummary = (list = []) => {
 };
 
 /* --- Component --- */
-export default function Attendance() {
+export default function HRAttendance() {
   const navigate = useNavigate();
 
   const [selectedDate, setSelectedDate] = useState(toYYYYMMDD()); // default today

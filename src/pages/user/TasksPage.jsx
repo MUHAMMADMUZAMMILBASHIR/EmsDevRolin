@@ -1,12 +1,12 @@
 import React from 'react'
 import Layout from '../../components/Layout'
-import Profile from '../../components/user/Profile'
+import Tasks from '../../components/user/Tasks'
 
-export default function profile() {
+export default function TasksPage() {
   return (
     <div>
       <Layout>
-    <Profile/>
+        <Tasks/>
       </Layout>
     </div>
   )

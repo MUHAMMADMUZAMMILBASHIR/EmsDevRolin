@@ -232,7 +232,7 @@ import toast from "react-hot-toast";
 import { Plus, Edit, Trash, Award } from "lucide-react";
 import Sidebar from "../sideBar";
 
-export default function Achievements() {
+export default function HRAchievements() {
   const [achievements, setAchievements] = useState([]);
   const [employees, setEmployees] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -310,10 +310,10 @@ export default function Achievements() {
 
   return (
     <div className="flex flex-col md:flex-row min-h-screen bg-gray-50">
-      {/* Sidebar */}
+      {/* Sidebar
       <div className="w-full md:w-64 bg-white shadow-md">
         <Sidebar />
-      </div>
+      </div> */}
 
       {/* Main Content */}
       <div className="flex-1 p-4 mt-12 md:p-8">
