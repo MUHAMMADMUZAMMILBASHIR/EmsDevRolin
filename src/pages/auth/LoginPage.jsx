@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import axios from "../../util/axiosInstance"
 import { UserInfoContext } from "../../context/contextApi";
 import toast from "react-hot-toast";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
   const {setUser,setAccessToken} = useContext(UserInfoContext)
@@ -115,9 +115,9 @@ const handleSubmit = async(e) => {
         {/* Footer */}
         <p className="mt-6 text-center text-sm text-gray-600">
           New employee?{" "}
-          <a href="/signup" className="text-blue-600 hover:underline">
+          <Link to="/signup" className="text-blue-600 hover:underline">
             Create Account
-          </a>
+          </Link>
         </p>
 
         {/* <p className="mt-4 text-center text-xs text-gray-400">
